@@ -26,9 +26,6 @@
 			<div class="slides">
 				<section>
 					<h2>A Beginners Intro to Web Development</h2>
-					<div>
-						<img class="plain" src="images/codeupleeds.png" alt="code up logo"/>
-					</div>
 				</section>
 
 				<section id="objectives" data-background="#dddddd">
@@ -39,7 +36,7 @@
 						<li>Create and view a simple webpage</li>
 						<li>Add some simple styling improvements to a webpage</li>
                         <li>Add some interactivity using JavaScript</li>
-                        <li>Build a tic tac toe web game</li>
+                        <li>Build a noughts and crosses web game</li>
 					</ul>
 				</section>
 
@@ -99,7 +96,7 @@
 					<h2>Lets try it out!</h2>
 					<div>
 						<h3>
-							<a href="https://codepen.io">codepen.io</a>
+							<a href="https://codepen.io/pen/">codepen.io</a>
 						</h3>
 					</div>
 				</section>
@@ -136,7 +133,7 @@
                         <pre><code class="hljs html">&lt;a href="https://benbru.com"&gt;benbru.com&lt;/a&gt;</code></pre>
                     </div>
                         <div>
-                            <a href="https://codepen.io/">Try it out</a>
+                            <a href="https://codepen.io/pen//">Try it out</a>
                         </div>
 
 
@@ -208,7 +205,7 @@
                         </div>
                         <hr>
                         <div>
-                            <a href="https://codepen.io/">Try it out</a>
+                            <a href="https://codepen.io/pen/">Try it out</a>
                         </div>
 
                     </section>
@@ -216,7 +213,7 @@
 
                 <section>
                     <h2>Let's put it together</h2>
-                    <p>Tic Tac Toe</p>
+                    <p>Noughts and Crosses</p>
                 </section>
 
                 <section id="draw-board">
@@ -239,7 +236,7 @@
                       clear: left;
                     }
 
-                    .column { 
+                    .column {
                       border: 1px solid black;
                       display:inline-block;
                       float:left;
@@ -255,8 +252,8 @@
                     <pre><code class="hljs css">
     .nought {
         background-image: url("https://bit.ly/2UB4bmj");
-    } 
-    .cross { 
+    }
+    .cross {
         background-image: url("https://bit.ly/2KZJX5Z");
     }
                     </code></pre>
@@ -288,7 +285,7 @@
                         <li><a href="https://www.youtube.com/watch?v=d1upI3mwfNY">Check this out</a></li>
                     </ul>
                 </section>
-                
+
                 <section>
                     <h2>Variables in JS</h2>
                     <ul>
@@ -328,7 +325,7 @@
                         <pre><code class="hljs javascript">
     var boards = document.getElementsByClassName("board")
     console.log(boards.length)
-    var board = boards.item(0) // Gets the first items 
+    var board = boards.item(0) // Gets the first items
     board.classList.add("cross") // Add a css class
     board.classList.add("nought")
     board.classList.remove("cross") // Remove a css class
@@ -343,7 +340,7 @@
                 <section>
                         <h2>Exercise 2 - Solution</h2>
                         <pre><code class="hljs javascript">
-    var boardPieces = 
+    var boardPieces =
         document.getElementsByClassName("board-piece")
                         </code></pre>
                 </section>
@@ -355,10 +352,10 @@
     var anotherNumber = 5
     function addTwoNumbers(x, y) {
         // Private variable inside the function
-        var z = x + y 
+        var z = x + y
         console.log(z)
     }
-    
+
     addTwoNumbers(myNumber, anotherNumber)
                         </code></pre>
                 </section>
@@ -414,7 +411,7 @@
     function onBoardPieceClick(event) {
         console.log("ouch")
     }
-        
+
     for (var i = 0; i < boardPieces.length; i = i + 1) {
         boardPieces.item(i).onclick = onBoardPieceClick
     }
@@ -433,7 +430,7 @@
         var boardPiece = event.target
         boardPiece.classList.add(turn)
     }
-        
+
     for (var i = 0; i < boardPieces.length; i = i + 1) {
         boardPieces.item(i).onclick = onBoardPieceClick
     }
@@ -483,7 +480,7 @@
         boardPiece.classList.add(turn)
         if (turn == "nought") {
             turn = "cross"
-        } 
+        }
         if (turn == "square") {
             turn = "nought"
         }
@@ -501,11 +498,6 @@
                         <li>
                             <a href="https://developer.mozilla.org/docs/Web">
                                 developer.mozilla.org/docs/Web
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://join.slack.com/t/codeupleeds/shared_invite/enQtMzgyODEzODYwODIxLWY1MTZkOTc0MGQ0ZDlhNTkzYmI2YmIxMGJiYzdjZjI5Y2Q1ZTgyMTQyZmZmOTBiZDQzNWQ4NmJlNjc3ZjlhN2E">
-                                Join us on Slack!
                             </a>
                         </li>
                     </ul>
